@@ -16,8 +16,8 @@ class NotesTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.title = "NotesApp"
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        self.title = "Emoji Reader"
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
@@ -35,8 +35,10 @@ class NotesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath) as! NotesTableViewCell
+        
+        //cell.textLabel?.text = "\(indexPath)"
+        cell.emojiLabel.text = "😃"
 
         // Configure the cell...
 
