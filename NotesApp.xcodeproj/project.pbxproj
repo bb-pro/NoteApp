@@ -13,6 +13,7 @@
 		ED9A06C829863CF3003CECCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9A06C629863CF3003CECCA /* Main.storyboard */; };
 		ED9A06CA29863CF4003CECCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9A06C929863CF4003CECCA /* Assets.xcassets */; };
 		ED9A06CD29863CF4003CECCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9A06CB29863CF4003CECCA /* LaunchScreen.storyboard */; };
+		ED9A06D52986431C003CECCA /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06D42986431C003CECCA /* NotesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ED9A06C929863CF4003CECCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED9A06CC29863CF4003CECCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED9A06CE29863CF4003CECCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED9A06D42986431C003CECCA /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				ED9A06C029863CF3003CECCA /* AppDelegate.swift */,
 				ED9A06C229863CF3003CECCA /* SceneDelegate.swift */,
 				ED9A06C429863CF3003CECCA /* ViewController.swift */,
+				ED9A06D42986431C003CECCA /* NotesTableViewController.swift */,
 				ED9A06C629863CF3003CECCA /* Main.storyboard */,
 				ED9A06C929863CF4003CECCA /* Assets.xcassets */,
 				ED9A06CB29863CF4003CECCA /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9A06C529863CF3003CECCA /* ViewController.swift in Sources */,
+				ED9A06D52986431C003CECCA /* NotesTableViewController.swift in Sources */,
 				ED9A06C129863CF3003CECCA /* AppDelegate.swift in Sources */,
 				ED9A06C329863CF3003CECCA /* SceneDelegate.swift in Sources */,
 			);
