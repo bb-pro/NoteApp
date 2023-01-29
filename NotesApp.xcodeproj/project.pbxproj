@@ -15,6 +15,7 @@
 		ED9A06CD29863CF4003CECCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9A06CB29863CF4003CECCA /* LaunchScreen.storyboard */; };
 		ED9A06D52986431C003CECCA /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06D42986431C003CECCA /* NotesTableViewController.swift */; };
 		ED9A06D7298680E3003CECCA /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06D6298680E3003CECCA /* NotesTableViewCell.swift */; };
+		ED9A06D929868945003CECCA /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06D829868945003CECCA /* EmojiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ED9A06CE29863CF4003CECCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9A06D42986431C003CECCA /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		ED9A06D6298680E3003CECCA /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		ED9A06D829868945003CECCA /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,9 @@
 				ED9A06C229863CF3003CECCA /* SceneDelegate.swift */,
 				ED9A06C429863CF3003CECCA /* ViewController.swift */,
 				ED9A06D42986431C003CECCA /* NotesTableViewController.swift */,
-				ED9A06C629863CF3003CECCA /* Main.storyboard */,
 				ED9A06D6298680E3003CECCA /* NotesTableViewCell.swift */,
+				ED9A06D829868945003CECCA /* EmojiModel.swift */,
+				ED9A06C629863CF3003CECCA /* Main.storyboard */,
 				ED9A06C929863CF4003CECCA /* Assets.xcassets */,
 				ED9A06CB29863CF4003CECCA /* LaunchScreen.storyboard */,
 				ED9A06CE29863CF4003CECCA /* Info.plist */,
@@ -146,6 +149,7 @@
 			files = (
 				ED9A06C529863CF3003CECCA /* ViewController.swift in Sources */,
 				ED9A06D52986431C003CECCA /* NotesTableViewController.swift in Sources */,
+				ED9A06D929868945003CECCA /* EmojiModel.swift in Sources */,
 				ED9A06D7298680E3003CECCA /* NotesTableViewCell.swift in Sources */,
 				ED9A06C129863CF3003CECCA /* AppDelegate.swift in Sources */,
 				ED9A06C329863CF3003CECCA /* SceneDelegate.swift in Sources */,

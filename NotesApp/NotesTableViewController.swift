@@ -8,7 +8,12 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
-
+    
+    let objects = [
+        Emoji(emoji: "🥰", name: "Love", description: "Let's love each other", isFavourite: false),
+        Emoji(emoji: "☕️", name: "Coffee", description: "Let's drink some coffee", isFavourite: false),
+        Emoji(emoji: "🥶", name: "cold", description: "It's cold outside", isFavourite: false)
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,7 +21,7 @@ class NotesTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.title = "Emoji Reader"
+        self.title = "Notes App"
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
@@ -30,16 +35,16 @@ class NotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return objects.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath) as! NotesTableViewCell
-        
+        let object = objects[indexPath.row]
+        cell.set(object: object)
         //cell.textLabel?.text = "\(indexPath)"
-        cell.emojiLabel.text = "😃"
-
+        
         // Configure the cell...
 
         return cell
