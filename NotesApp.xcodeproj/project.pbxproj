@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED468F4A298A586400F0F4F1 /* NewNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED468F49298A586400F0F4F1 /* NewNoteTableViewController.swift */; };
 		ED9A06C129863CF3003CECCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06C029863CF3003CECCA /* AppDelegate.swift */; };
 		ED9A06C329863CF3003CECCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06C229863CF3003CECCA /* SceneDelegate.swift */; };
 		ED9A06C529863CF3003CECCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A06C429863CF3003CECCA /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED468F49298A586400F0F4F1 /* NewNoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteTableViewController.swift; sourceTree = "<group>"; };
 		ED9A06BD29863CF3003CECCA /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9A06C029863CF3003CECCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9A06C229863CF3003CECCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				ED9A06D6298680E3003CECCA /* NotesTableViewCell.swift */,
 				ED9A06D829868945003CECCA /* EmojiModel.swift */,
 				ED9A06C629863CF3003CECCA /* Main.storyboard */,
+				ED468F49298A586400F0F4F1 /* NewNoteTableViewController.swift */,
 				ED9A06C929863CF4003CECCA /* Assets.xcassets */,
 				ED9A06CB29863CF4003CECCA /* LaunchScreen.storyboard */,
 				ED9A06CE29863CF4003CECCA /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				ED9A06C529863CF3003CECCA /* ViewController.swift in Sources */,
 				ED9A06D52986431C003CECCA /* NotesTableViewController.swift in Sources */,
+				ED468F4A298A586400F0F4F1 /* NewNoteTableViewController.swift in Sources */,
 				ED9A06D929868945003CECCA /* EmojiModel.swift in Sources */,
 				ED9A06D7298680E3003CECCA /* NotesTableViewCell.swift in Sources */,
 				ED9A06C129863CF3003CECCA /* AppDelegate.swift in Sources */,
