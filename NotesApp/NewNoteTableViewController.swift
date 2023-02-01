@@ -9,6 +9,12 @@ import UIKit
 
 class NewNoteTableViewController: UITableViewController {
 
+    @IBOutlet var emojiTextField: UITextField!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
+    
+    @IBOutlet var saveButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +24,11 @@ class NewNoteTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    @IBAction func textChanged(_ sender: UITextField) {
+        
+    }
+    
+    
 
     // MARK: - Table view data source
 
@@ -39,7 +50,7 @@ class NewNoteTableViewController: UITableViewController {
 
         return cell
     }
-    */  
+    */
 
     /*
     // Override to support conditional editing of the table view.
