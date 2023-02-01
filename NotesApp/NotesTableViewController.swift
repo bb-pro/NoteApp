@@ -16,10 +16,10 @@ class NotesTableViewController: UITableViewController {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.title = "Notes App"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
@@ -31,24 +31,44 @@ class NotesTableViewController: UITableViewController {
         guard segue.identifier == "saveSegue" else { return }
         let sourceVC = segue.source as! NewNoteTableViewController
         let note = sourceVC.note
-        let newIndexPath = IndexPath(row: objects.count , section: 0)
-
-        objects.append(note)
-        tableView.insertRows(at: [newIndexPath], with: .fade)
+        
+        
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            objects[selectedIndexPath.row] = note
+            tableView.reloadRows(at: [selectedIndexPath], with: .fade)
+        } else {
+            let newIndexPath = IndexPath(row: objects.count , section: 0)
+            objects.append(note)
+            tableView.insertRows(at: [newIndexPath], with: .fade)
+        }
+        
+        
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "editEmoji" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let emoji = objects[indexPath.row]
+        let navigationVC = segue.destination as! UINavigationController
+        let newEmojiVC = navigationVC.topViewController as! NewNoteTableViewController
+        newEmojiVC.note = emoji
+        newEmojiVC.title = "Edit"
+        
+    }
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return objects.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath) as! NotesTableViewCell
@@ -57,7 +77,7 @@ class NotesTableViewController: UITableViewController {
         //cell.textLabel?.text = "\(indexPath)"
         
         // Configure the cell...
-
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -74,6 +94,7 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedEmoji = objects.remove(at: sourceIndexPath.row)
         objects.insert(movedEmoji, at: destinationIndexPath.row)
@@ -84,7 +105,6 @@ class NotesTableViewController: UITableViewController {
         let love = favouriteAction(at: indexPath)
         return UISwipeActionsConfiguration(actions: [love, done])
     }
-    
     
     func doneAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .destructive, title: "Done") { (action, view, completion) in
@@ -97,7 +117,6 @@ class NotesTableViewController: UITableViewController {
         return action
     }
     
-    
     func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
         var object = objects[indexPath.row]
         let action  = UIContextualAction(style: .normal, title: "Like") { (action, view, completion) in
@@ -109,5 +128,5 @@ class NotesTableViewController: UITableViewController {
         action.image = UIImage(systemName: "heart")
         return action
     }
-
+    
 }

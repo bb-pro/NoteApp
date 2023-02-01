@@ -19,12 +19,8 @@ class NewNoteTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        updateSaveButtonState()
+        updateUI()
     }
     
     private func updateSaveButtonState() {
@@ -34,8 +30,15 @@ class NewNoteTableViewController: UITableViewController {
         saveButton.isEnabled = !emojiText.isEmpty && !nameText.isEmpty && !descriptionText.isEmpty
     }
     
+    private func updateUI() {
+        emojiTextField.text = note.emoji
+        nameTextField.text = note.name
+        descriptionTextField.text = note.description
+        
+    }
+    
     @IBAction func textChanged(_ sender: UITextField) {
-        updateSaveButtonState()
+                updateSaveButtonState()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
