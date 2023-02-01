@@ -32,7 +32,6 @@ class NewNoteTableViewController: UITableViewController {
         saveButton.isEnabled = !emojiText.isEmpty && !nameText.isEmpty && !descriptionText.isEmpty
     }
     
-    
     @IBAction func textChanged(_ sender: UITextField) {
         updateSaveButtonState()
     }
