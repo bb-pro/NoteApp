@@ -28,7 +28,13 @@ class NotesTableViewController: UITableViewController {
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        
+        guard segue.identifier == "saveSegue" else { return }
+        let sourceVC = segue.source as! NewNoteTableViewController
+        let note = sourceVC.note
+        let newIndexPath = IndexPath(row: objects.count , section: 0)
+
+        objects.append(note)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
     }
 
     // MARK: - Table view data source
